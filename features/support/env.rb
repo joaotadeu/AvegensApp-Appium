@@ -1,6 +1,6 @@
 require "allure-cucumber"
 require "appium_lib"
-
+require "selenium-webdriver"
 require "fileutils"
 
 # Limpa os logs e os screenshots

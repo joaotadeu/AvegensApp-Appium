@@ -1,21 +1,23 @@
-# Before do
-#   driver.start_driver
-#   driver.manage.timeouts.implicit_wait = 10
-# end
+Before do
+ driver.start_driver
+ driver.manage.timeouts.implicit_wait = 10
 
-# After do |scenario|
-#   binary_shot = driver.screenshot_as(:base64)
+ find_element(xpath: '//android.widget.Button[@text="COMEÇAR"]').click
+end
 
-#   temp_shot = "logs/temp_shot.png"
+After do |scenario|
+  binary_shot = driver.screenshot_as(:base64)
 
-#   File.open(temp_shot, "wb") do |f|
-#     f.write(Base64.decode64(binary_shot).force_encoding("UTF-8"))
-#   end
+  temp_shot = "logs/temp_shot.png"
 
-#   Allure.add_attachment(
-#     name: "screenshot",
-#     type: Allure::ContentType::PNG,
-#     source: File.open(temp_shot),
-#   )
-#   driver.quit_driver
-# end
+  File.open(temp_shot, "wb") do |f|
+    f.write(Base64.decode64(binary_shot).force_encoding("UTF-8"))
+  end
+
+  Allure.add_attachment(
+    name: "screenshot",
+    type: Allure::ContentType::PNG,
+    source: File.open(temp_shot),
+  )
+  driver.quit_driver
+end
