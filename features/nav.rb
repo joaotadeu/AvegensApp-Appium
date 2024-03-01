@@ -25,6 +25,6 @@ end
   
 
 Então('devo ver a mensagem {string}') do |mensagem_esperada|
-    elemento = find_element(id: 'io.qaninja.android.twp:id/textAboutExtended') # Substitua pelo seu seletor real
+    elemento = find_element(id: 'io.qaninja.android.twp:id/textAboutExtended')
     expect(elemento.text).to include(mensagem_esperada)
 end
