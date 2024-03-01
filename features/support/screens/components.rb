@@ -8,25 +8,21 @@ class Navigator
     return find_element(id: 'io.qaninja.android.twp:id/rvList')
   end
 
-#   def lista_heroi
-#    case lista_heroi ['Heroi']
-#     when 'Capitão America'
-#           find_element(xpath: '(//android.widget.ImageView[@content-desc="Icon"])[1]').click
-#     when 'Thor'
-#           find_element(xpath: '(//android.widget.ImageView[@content-desc="Icon"])[2]').click
-#     when 'Homem de Ferro'
-#           find_element(xpath: '(//android.widget.ImageView[@content-desc="Icon"])[3]').click
-#     when 'Hulk'
-#           find_element(xpath: '(//android.widget.ImageView[@content-desc="Icon"])[4]').click
-#     when 'Homem Aranha'
-#           find_element(xpath: '(//android.widget.ImageView[@content-desc="Icon"])[5]').click
-#     else
-#           puts 'Não encontrado'
-#     end
-        
-#   end
-
-#      def
-#         return find_element(id: 'io.qaninja.android.twp:id/textAboutExtended')
-#      end
+  def selecionar_heroi(heroi)
+    case heroi
+    when 'Capitão America'
+      @driver.find_element(xpath: '(//android.widget.ImageView[@content-desc="Icon"])[1]').click
+    when 'Thor'
+      @driver.find_element(xpath: '(//android.widget.ImageView[@content-desc="Icon"])[2]').click
+    when 'Homem de Ferro'
+      @driver.find_element(xpath: '(//android.widget.ImageView[@content-desc="Icon"])[3]').click
+    when 'Hulk'
+      @driver.find_element(xpath: '(//android.widget.ImageView[@content-desc="Icon"])[4]').click
+    when 'Homem Aranha'
+      @driver.find_element(xpath: '(//android.widget.ImageView[@content-desc="Icon"])[5]').click
+    else
+      puts 'Não encontrado'
+    end
+  end
+  
 end

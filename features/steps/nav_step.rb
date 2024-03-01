@@ -4,21 +4,8 @@ Dado('que acesso o menu do app') do
 end
   
 Quando('seleciono o Heroi da lista') do |table|
-    lista_heroi = table.hashes.first
-    case lista_heroi ['Heroi']
-        when 'Capitão America'
-          find_element(xpath: '(//android.widget.ImageView[@content-desc="Icon"])[1]').click
-        when 'Thor'
-          find_element(xpath: '(//android.widget.ImageView[@content-desc="Icon"])[2]').click
-        when 'Homem de Ferro'
-          find_element(xpath: '(//android.widget.ImageView[@content-desc="Icon"])[3]').click
-        when 'Hulk'
-          find_element(xpath: '(//android.widget.ImageView[@content-desc="Icon"])[4]').click
-        when 'Homem Aranha'
-          find_element(xpath: '(//android.widget.ImageView[@content-desc="Icon"])[5]').click
-        else
-          puts 'Não encontrado'
-        end
+  lista_heroi = table.hashes.first
+  @Navigator.selecionar_heroi(lista_heroi['Heroi'])
 end
   
 
