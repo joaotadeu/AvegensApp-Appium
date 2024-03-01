@@ -12,5 +12,3 @@ Funcionalidade: Navegação de App Avengers
         | Heroi  |
         | Thor   |
         Então devo ver a mensagem "Deus do Trovão, príncipe herdeiro de Asgard"
-
-    

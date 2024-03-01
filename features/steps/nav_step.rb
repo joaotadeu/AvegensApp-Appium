@@ -1,8 +1,6 @@
 Dado('que acesso o menu do app') do
-    find_element(xpath: '//androidx.recyclerview.widget.RecyclerView[@resource-id="io.qaninja.android.twp:id/rvSubMenu"]/android.widget.FrameLayout[1]/android.widget.LinearLayout/android.widget.FrameLayout').click
-    lista = find_element(id: 'io.qaninja.android.twp:id/rvList')
-    expect(lista.displayed?).to be true
-    sleep 3
+  @Navigator.tap_lista
+  expect(@Navigator.list.displayed?).to be true
 end
   
 Quando('seleciono o Heroi da lista') do |table|
