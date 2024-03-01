@@ -25,4 +25,7 @@ class Navigator
     end
   end
   
+  def mensagem_esperada
+    return find_element(id: 'io.qaninja.android.twp:id/textAboutExtended')
+  end
 end
