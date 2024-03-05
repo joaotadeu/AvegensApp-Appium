@@ -5,7 +5,7 @@ Funcionalidade: Navegação de App Avengers
         Acesso menu de login
         efetuo login com sucesso ou sem sucesso
 
-    @teste_cadastro
+    @teste_login
     Cenario: Abrir Menu do App e efetuar login
         Dado que acesso o menu do app buscando por login
         Quando submeto minhas submeto minhas credenciais
