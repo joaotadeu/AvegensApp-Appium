@@ -3,7 +3,7 @@
 Funcionalidade: Navegação de App Avengers e efetuando cadastro
         Acesso APP Avengers
         Acesso menu de cadastro
-        efetuo cadastro com sucesso ou sem sucesso
+        efetuo cadastro com sucesso
 
     @teste_cadastro
     Cenario: Abrir menu do app e efetuar o cadastro
