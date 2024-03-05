@@ -8,6 +8,10 @@ class Navigator
     return find_element(id: 'io.qaninja.android.twp:id/rvList')
   end
 
+  def tap_menu
+    return find_element(xpath: '//android.widget.ImageButton[@content-desc="Open navigation drawer"]').click
+  end
+
   def selecionar_heroi(heroi)
     case heroi
     when 'Capitão America'
@@ -28,4 +32,9 @@ class Navigator
   def mensagem_esperada
     return find_element(id: 'io.qaninja.android.twp:id/textAboutExtended')
   end
+
+  def tap_option(target)
+    find_element(xpath: "//*[@text='#{target}']").click
+  end
+
 end
