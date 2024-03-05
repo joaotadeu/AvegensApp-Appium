@@ -16,5 +16,5 @@ class CadastroScreen
 
     def mensagem_esperada
         return find_element(xpath: '//android.widget.Toast[@text="Tudo certo, recebemos seus dados!"]')
-      end
+    end
 end
