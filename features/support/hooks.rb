@@ -3,6 +3,7 @@ Before do
  driver.manage.timeouts.implicit_wait = 10
  @LoginScreen = LoginScreen.new
  @Navigator = Navigator.new
+ @CadastroScreen = CadastroScreen.new
  find_element(xpath: '//android.widget.Button[@text="COMEÇAR"]').click
 end
 
