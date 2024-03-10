@@ -1,4 +1,4 @@
-require "allure-cucumber"
+# require "allure-cucumber"
 require "appium_lib"
 require "selenium-webdriver"
 require "fileutils"

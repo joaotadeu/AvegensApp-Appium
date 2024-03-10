@@ -16,10 +16,10 @@ After do |scenario|
     f.write(Base64.decode64(binary_shot).force_encoding("UTF-8"))
   end
 
-  Allure.add_attachment(
-    name: "screenshot",
-    type: Allure::ContentType::PNG,
-    source: File.open(temp_shot),
-  )
+  # Allure.add_attachment(
+  #   name: "screenshot",
+  #   type: Allure::ContentType::PNG,
+  #   source: File.open(temp_shot),
+  # )
   driver.quit_driver
 end
